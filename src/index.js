@@ -44,3 +44,11 @@ form.addEventListener("submit", async (event) => {
 
   console.log(weather);
 });
+
+function displayWeather(weather) {
+  output.innerHTML = `<h2>${weather.city}</h2>
+  <p>Temperature: ${weather.temperature}°C</p>
+  <p>Feels like: ${weather.feelsLike}°C</p>
+  <p>Humidity: ${weather.humidity}%</p>
+  <p>Conditions: ${weather.description}</p>`;
+}
