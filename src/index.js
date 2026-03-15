@@ -21,10 +21,10 @@ async function fetchWeather(location) {
 
     if (!response.ok) throw new Error("Location not found");
     const data = await response.json();
-
     const weather = processWeatherData(data);
 
     console.log(weather);
+
     return weather;
   } catch (error) {
     console.error(error);
@@ -32,4 +32,15 @@ async function fetchWeather(location) {
   }
 }
 
-fetchWeather("London");
+const form = document.getElementById("location-form");
+const input = document.getElementById("location-input");
+const output = document.getElementById("weather-output");
+
+form.addEventListener("submit", async (event) => {
+  event.preventDefault();
+
+  const location = input.value;
+  const weather = await fetchWeather(location);
+
+  console.log(weather);
+});
