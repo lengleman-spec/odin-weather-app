@@ -1,6 +1,73 @@
 body {
-  background-color: #f0f0f0;
+  background: linear-gradient(to right, #a8edea, #fed6e3);
   font-family: sans-serif;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+form,
+#weather-output {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 20px;
+}
+
+#location-form {
+  display: flex;
+  gap: 10px;
+}
+
+#location-input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+#location-form button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  background-color: #6c63ff;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#location-form button:hover {
+  background-color: #5348d0;
+}
+
+/* Weather Output */
+#weather-output h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+#weather-output p {
+  font-size: 16px;
+  margin: 5px 0;
+  color: #555;
+}
+
+/* Loading / Error Messages */
+#weather-output p {
+  text-align: center;
+  font-style: italic;
 }
