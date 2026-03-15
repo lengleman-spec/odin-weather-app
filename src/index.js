@@ -18,6 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
     };
   }
 
+  output.innerHTML = "<p>Loading...</p>";
+
   async function fetchWeather(location) {
     try {
       const response = await fetch(
