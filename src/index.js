@@ -42,7 +42,9 @@ form.addEventListener("submit", async (event) => {
   const location = input.value;
   const weather = await fetchWeather(location);
 
-  console.log(weather);
+  if (weather) {
+    displayWeather(weather);
+  }
 });
 
 function displayWeather(weather) {
